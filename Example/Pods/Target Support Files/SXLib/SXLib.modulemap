@@ -1,0 +1,6 @@
+framework module SXLib {
+  umbrella header "SXLib-umbrella.h"
+
+  export *
+  module * { export * }
+}

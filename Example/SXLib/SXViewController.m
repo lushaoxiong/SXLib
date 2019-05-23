@@ -7,7 +7,7 @@
 //
 
 #import "SXViewController.h"
-
+#import <SXLib/SXLibHeader.h>
 @interface SXViewController ()
 
 @end
