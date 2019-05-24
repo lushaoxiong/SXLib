@@ -1,6 +1,6 @@
 {
   "name": "SXLib",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "A short description of SXLib.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/lushaoxiong/SXLib",
@@ -13,10 +13,15 @@
   },
   "source": {
     "git": "https://github.com/lushaoxiong/SXLib.git",
-    "tag": "0.1.0"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SXLib/Classes/**/*"
+  "source_files": "SXLib/Classes/**/*",
+  "resource_bundles": {
+    "SXLib": [
+      "SXLib/Assets/**"
+    ]
+  }
 }
