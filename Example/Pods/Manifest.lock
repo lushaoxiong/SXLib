@@ -1,5 +1,5 @@
 PODS:
-  - SXLib (0.1.2)
+  - SXLib (0.1.3)
 
 DEPENDENCIES:
   - SXLib (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SXLib: 0c9c0025edf467eeeb38d3baed9871d4ab7b43cc
+  SXLib: d15ef99e739ea38ec08b8a87376535b4a93fe7e0
 
 PODFILE CHECKSUM: 746664a2fd6618199683dd605096fbc555a5c458
 
