@@ -8,6 +8,25 @@
 
 #import "FSPageContentView.h"
 
+@interface SwipeCollectionView:UICollectionView
+@end
+
+@implementation SwipeCollectionView
+
+- (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer {
+    if (![gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
+        return [super gestureRecognizerShouldBegin:gestureRecognizer];
+    }
+    CGFloat x = [gestureRecognizer translationInView:self].x;
+    if ( x>=0 && self.contentOffset.x<=0 ) {
+        return NO;
+    }else {
+        return YES;
+    }
+}
+
+@end
+
 #define IOS_VERSION ([[[UIDevice currentDevice] systemVersion] floatValue])
 static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
 
@@ -52,7 +71,7 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
-        UICollectionView * collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
+        UICollectionView * collectionView = [[SwipeCollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
         collectionView.showsHorizontalScrollIndicator = NO;
         collectionView.pagingEnabled = YES;
         collectionView.bounces = NO;
